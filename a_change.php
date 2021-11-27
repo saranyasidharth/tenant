@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "conn.php";
-
+// asdfghjkl;/
 $user = $_SESSION['username'];
 $sql = "SELECT * FROM user WHERE u_name = '$user'";
 $res = mysqli_query($con, $sql);
