@@ -76,7 +76,7 @@ if(!$_SESSION['username']){
       <div id="content" >
         <nav class="navbar navbar-expand navbar-light  topbar mb-2 static-top shadow" style="background-color:#39A2DB; height:1.9cm;" >
 
-          <!-- Sidebar Toggle (Topbar) -->
+          <!-- Sidebar Toghhhhhhgle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3" style="color:white;">
             <i class="fa fa-bars white-color" style="color:white;"></i>
           </button>
