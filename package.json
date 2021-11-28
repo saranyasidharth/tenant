@@ -1,6 +1,6 @@
 {
-    "title": "SB Admin 2",
-    "name": "startbootstrap-sb-admin-2",
+    "title": "tenant",
+    "name": "tenant",
     "version": "4.0.4",
     "scripts": {
         "start": "gulp watch"

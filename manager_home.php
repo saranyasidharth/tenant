@@ -8,6 +8,8 @@ $res = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($res);
 do {
   $role = $row['role'];
+  $id = $row['user_id'];
+
   $row = mysqli_fetch_assoc($res);
 } while ($row);
 if(!$user && $role == 'Manager'){
@@ -168,10 +170,10 @@ if(!$user && $role == 'Manager'){
                   <thead>
                     <tr>
                       <th>Name</th>
-                      <th>Phone Number 1</th>
-                      <th>Phone Number 2</th>
+                      <th>Phone Number </th>
+                      <th>Alternative Number </th>
                       <th>House Name</th>
-                      <th>Duration of Occupation in months</th>
+                      <th>Duration in months</th>
                       <th>Terms of Payment</th>
                       <th>Rent per Term(Tsh.)</th>
                       <th>Beginning of Contract</th>
@@ -180,11 +182,11 @@ if(!$user && $role == 'Manager'){
                   </thead>
                   <tbody>
                     <?php
-
-                    $sql = "SELECT * FROM contract";
+        
+                    $sql = "SELECT * FROM contract where user_id='$id'";
                     $result = mysqli_query($con, $sql);
                     $row = mysqli_fetch_assoc($result);
-
+                   
                     do{
                       $t_id = $row['tenant_id'];
                       $c_id = $row['contract_id'];
@@ -199,7 +201,7 @@ if(!$user && $role == 'Manager'){
                         $pno1 = $row1['pno1'];
                         $row1 = mysqli_fetch_assoc($result1);
                       }while ($row1);
-
+                    
                       $h_id = $row['house_id'];
                       $query1 = "SELECT * FROM house WHERE house_id = '$h_id'";
                       $result2 = mysqli_query($con, $query1);
@@ -229,6 +231,7 @@ if(!$user && $role == 'Manager'){
                         echo '</tr>';
                       $row = mysqli_fetch_assoc($result);
                     }while ($row);
+                  
                      ?>
 
                   </tbody>
