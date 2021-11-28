@@ -74,12 +74,11 @@ include 'conn.php';
     </nav>
 
     <section id="search top-left" class="">
-    <!-- <img src="homepage.jpg" height="100%" width="100%">     -->
       <div class="container">
         <div class="row">
           <div class="col-lg-12 ">
           <h2 class="section-heading ">Secure and safe way to rent<br> your home</h2>
-            <!-- <h3 class="section-subheading text-muted">Search rooms or homes for hire.</h3> -->
+            
           </div>
         </div>
         <div class="row">
@@ -95,7 +94,7 @@ include 'conn.php';
                 <br>
                 <br>
                 <br>
-<br>
+          <br>
 
                 <div class="col-md-2" style=";position:absolute;"><br>
                 <br><br>
@@ -113,20 +112,13 @@ include 'conn.php';
           <div class="row">
             <div class="col-md-12">
               <div id="main-slider" class="owl-carousel owl-theme">
-                <!-- <div class="item"><img src="" alt="" class="img-fluid"></div> -->
+               
               </div>
-              <!-- /#main-slider-->
+              
             </div>
           </div>
         </div>
-        <!--
-        *** ADVANTAGES HOMEPAGE ***
-        _________________________________________________________
-
-        <!--
-        *** HOT PRODUCT SLIDESHOW ***
-        _________________________________________________________
-        -->
+        
         <div id="hot">
           <div class="box py-4">
             <div class="container">
@@ -153,13 +145,9 @@ include 'conn.php';
                       To Rent
                     </p>
                   </div>
-                  <!-- /.text-->
-
-                  <!-- /.ribbon-->
-
-                  <!-- /.ribbon-->
+                 
                 </div>
-                <!-- /.product-->
+                
               </div>
               <div class="item">
                 <div class="product">
@@ -180,13 +168,9 @@ include 'conn.php';
                        ?>
                     </p>
                   </div>
-                  <!-- /.text-->
-
-                  <!-- /.ribbon-->
-
-                  <!-- /.ribbon-->
+                 
                 </div>
-                <!-- /.product-->
+               
               </div>
               <div class="item">
                 <div class="product">
@@ -207,13 +191,9 @@ include 'conn.php';
                        ?>
                     </p>
                   </div>
-                  <!-- /.text-->
-
-                  <!-- /.ribbon-->
-
-                  <!-- /.ribbon-->
+                 
                 </div>
-                <!-- /.product-->
+                
               </div>
               <div class="item">
                 <div class="product">
@@ -234,13 +214,9 @@ include 'conn.php';
                        ?>
                     </p>
                   </div>
-                  <!-- /.text-->
-
-                  <!-- /.ribbon-->
-
-                  <!-- /.ribbon-->
+                  
                 </div>
-                <!-- /.product-->
+                
               </div>
               <div class="item">
                 <div class="product">
@@ -261,34 +237,20 @@ include 'conn.php';
                        ?>
                     </p>
                   </div>
-                  <!-- /.text-->
-
-                  <!-- /.ribbon-->
-
-                  <!-- /.ribbon-->
+                  
                 </div>
-                <!-- /.product-->
+                
               </div>
-              <!-- /.product-slider-->
+              
             </div>
-            <!-- /.container-->
+            
           </div>
-          <!-- /#hot-->
-          <!-- *** HOT END ***-->
+         
         </div>
 
       </div>
     </div>
-
-
-    <!-- /#footer-->
-    <!-- *** FOOTER END ***-->
-
-
-    <!--
-    *** COPYRIGHT ***
-    _________________________________________________________
-    -->
+    
     <div id="copyright">
       <div class="container center">
         <div class="row">
