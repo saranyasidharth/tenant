@@ -24,7 +24,7 @@ if(!($_SESSION['username'] == "Admin")){
    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-   
+  
    <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
    
@@ -35,17 +35,19 @@ if(!($_SESSION['username'] == "Admin")){
 
  <body id="page-top">
 
-     <div id="wrapper">
+  
+   <div id="wrapper">
 
-     
+    
      <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
+       
        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin_home.php">
 
          <div class="sidebar-brand-text mx-3">Rental House Management System</div>
        </a>
 
-      >
+       
        <hr class="sidebar-divider my-0">
 
        
@@ -55,10 +57,10 @@ if(!($_SESSION['username'] == "Admin")){
            <span>Dashboard</span></a>
        </li>
 
-       
+      
        <hr class="sidebar-divider">
 
-       
+      
        <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
            <i class="fas fa-home fa-cog"></i>
@@ -76,7 +78,7 @@ if(!($_SESSION['username'] == "Admin")){
        </li>
        <hr class="sidebar-divider">
 
-       
+      
        <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
            <i class="fas fa-clipboard-list"></i>
@@ -96,9 +98,7 @@ if(!($_SESSION['username'] == "Admin")){
        <hr class="sidebar-divider">
 
        
-
-
-         <li class="nav-item">
+       <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
            <i class="fas fa-user fa-cog"></i>
            <span>Tenants</span>
@@ -131,7 +131,7 @@ if(!($_SESSION['username'] == "Admin")){
        </li>
        <hr class="sidebar-divider">
 
-       
+      
        <li class="nav-item">
          <a class="nav-link" href="form_out.php">
            <i class="fas fa-fw fa-clipboard-list"></i>
@@ -142,7 +142,7 @@ if(!($_SESSION['username'] == "Admin")){
 
        <hr class="sidebar-divider">
 
-       
+      
        <li class="nav-item">
 
          <a class="nav-link" href="send-sms.php">
@@ -154,7 +154,6 @@ if(!($_SESSION['username'] == "Admin")){
 
 
 
-       
        <li class="nav-item">
          <a class="nav-link" href="a_change.php">
            <i class="fas fa-fw fa-exchange-alt"></i>
@@ -163,7 +162,7 @@ if(!($_SESSION['username'] == "Admin")){
 
        </li>
        <hr class="sidebar-divider">
-       
+
        <li class="nav-item">
          <a class="nav-link" href="a_register.php">
            <i class="fas fa-fw fa-user"></i>
@@ -172,10 +171,10 @@ if(!($_SESSION['username'] == "Admin")){
 
        </li>
 
-      
+       
        <hr class="sidebar-divider d-none d-md-block">
 
-       
+      
        <div class="text-center d-none d-md-inline">
          <button class="rounded-circle border-0" id="sidebarToggle"></button>
        </div>
@@ -184,10 +183,10 @@ if(!($_SESSION['username'] == "Admin")){
      
      <div id="content-wrapper" class="d-flex flex-column">
 
-     
+      
        <div id="content">
 
-       
+         
          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
          
@@ -213,7 +212,7 @@ if(!($_SESSION['username'] == "Admin")){
                    ?></span>
                  <img class="img-profile rounded-circle" src="user.png">
                </a>
-             
+              
                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
 
                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -226,13 +225,13 @@ if(!($_SESSION['username'] == "Admin")){
            </ul>
 
          </nav>
-        
+       
          <div class="container-fluid">
 
-          
+           
            <h1 class="h3 mb-2 text-gray-800" align = "center">Add House</h1>
 
-          
+           
            <div class="card shadow mb-4">
              <div class="card-body">
                <div class="table-responsive">
@@ -298,9 +297,10 @@ if(!($_SESSION['username'] == "Admin")){
            </div>
 
          </div>
-       
+        
+
        </div>
-     
+      
        <footer class="sticky-footer bg-white">
          <div class="container my-auto">
            <div class="copyright text-center my-auto">
@@ -309,8 +309,10 @@ if(!($_SESSION['username'] == "Admin")){
          </div>
        </footer>
       
+
      </div>
-    
+     
+
    </div>
    
    <a class="scroll-to-top rounded" href="#page-top">
@@ -347,7 +349,7 @@ if(!($_SESSION['username'] == "Admin")){
    <script src="vendor/jquery/jquery.min.js"></script>
    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-   
+  
    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
    

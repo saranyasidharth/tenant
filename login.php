@@ -79,29 +79,8 @@ if(isset($_POST["login"])){
         echo "<script type='text/javascript'>alert('Welcome $fname $lname!');</script>";
         echo '<style>body{display:none;}</style>';
         echo '<script>window.location.href = "home.php";</script>';
-      }elseif ($stat == 2) {
-        $_SESSION['username'] = $uname;
-        echo "<script type='text/javascript'>alert('Welcome $fname $lname!');</script>";
-        echo '<style>body{display:none;}</style>';
-        echo '<script>window.location.href = "waiting.php";</script>';
-      }elseif((date('Y-m-d') > $end_date) && $stat == 1){
-        $sql3 = "UPDATE tenant SET status = '3' WHERE tenant_id = '$id'";
-        mysqli_query($con, $sql3);
-        $sql5 = "UPDATE contract SET status ='Inactive' WHERE status = 'Active' AND tenant_id = '$id'";
-        mysqli_query($con, $sql5);
-        $sql5 = "UPDATE house SET status ='Empty' WHERE house_id = '$h_id'";
-        mysqli_query($con, $sql5);
-        $_SESSION['username'] = $uname;
-        echo "<script type='text/javascript'>alert('Welcome $fname $lname! Your contract has expired. To access the system please renew the contract.');</script>";
-        echo '<style>body{display:none; color:red;}</style>';
-        echo '<script>window.location.href = "renew_contract.php";</script>';
-
-      }elseif ($stat == 3) {
-        $_SESSION['username'] = $uname;
-        echo "<script type='text/javascript'>alert('Welcome $fname $lname! Your contract has expired. To access the system please renew the contract.');</script>";
-        echo '<style>body{display:none;}</style>';
-        echo '<script>window.location.href = "renew_contract.php";</script>';
       }
+      
     }
     mysqli_close($con);
     $uname = "";
@@ -243,7 +222,7 @@ background-size: 90%;">
             echo '</li>';
           }else{
             echo '<li class="nav-item">';
-             echo '<a class="nav-link" href="signup.php">Register</a>';
+             echo '<a class="nav-link" href="register.php">Register</a>';
            echo '</li>';
           }
         ?>
@@ -279,7 +258,7 @@ background-size: 90%;">
                     <a class="small" href="forgot-password.php">Forgot Password?</a>
                   </div>
                   <div class="text-center">
-                    <a class="small" href="signup.php">Create an Account!</a>
+                    <a class="small" href="register.php">Create an Account!</a>
                   </div>
                 </div>
               </div>

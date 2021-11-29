@@ -23,11 +23,11 @@ if($_SESSION['username'] != "Admin"){
   <title>Tenant</title>
   <link rel="icon" href="rent.ico">
 
-  
+
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- 
+  
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
@@ -35,7 +35,7 @@ if($_SESSION['username'] != "Admin"){
 
 <body id="page-top">
 
-  
+ 
   <div id="wrapper">
 
     
@@ -59,7 +59,7 @@ if($_SESSION['username'] != "Admin"){
       </li>
 
    
-      
+     
       
       <hr class="sidebar-divider">
       <li class="nav-item" >
@@ -110,27 +110,26 @@ if($_SESSION['username'] != "Admin"){
 
     
       
-         
-     
+       
+      <hr class="sidebar-divider d-none d-md-block">
 
-            <hr class="sidebar-divider d-none d-md-block">
-
-      
+      <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
 
     </ul>
-   
+    
     <div id="content-wrapper" class="d-flex flex-column">
 
       
       <div id="content">
 
-       
+        
         <nav class="navbar navbar-expand navbar-light  topbar mb-2 static-top shadow" style="background-color:#39A2DB; height:1.9cm;" >
         
-        
+       
+          
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
@@ -141,7 +140,7 @@ if($_SESSION['username'] != "Admin"){
 
             <div class="topbar-divider d-none d-sm-block"></div>
 
-            
+           
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-white-600 small">
@@ -153,7 +152,7 @@ if($_SESSION['username'] != "Admin"){
                   ?></span>
                 <img class="img-profile rounded-circle" src="user.png">
               </a>
-              
+             
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
 
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -175,10 +174,10 @@ if($_SESSION['username'] != "Admin"){
 
           </div>
 
-          
+         
           <div class="row">
 
-            
+           
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
@@ -295,7 +294,9 @@ if($_SESSION['username'] != "Admin"){
     
 
   </div>
-  
+ 
+
+ 
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
@@ -323,7 +324,7 @@ if($_SESSION['username'] != "Admin"){
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  
+
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
  
@@ -331,4 +332,4 @@ if($_SESSION['username'] != "Admin"){
 
 </body>
 
-</html>
+</html

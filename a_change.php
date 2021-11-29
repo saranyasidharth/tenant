@@ -66,7 +66,7 @@ function check($data){
        
        <hr class="sidebar-divider my-0">
 
-       
+      
        <li class="nav-item">
          <a class="nav-link" href="admin_home.php">
            <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -76,7 +76,8 @@ function check($data){
        
        <hr class="sidebar-divider">
 
-      
+       
+       <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
            <i class="fas fa-home fa-cog"></i>
            <span>House</span>
@@ -109,13 +110,13 @@ function check($data){
          </div>
        </li>
 
-    
+       
        <hr class="sidebar-divider">
 
-      
+       
 
 
-      
+       
        <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
            <i class="fas fa-user fa-cog"></i>
@@ -193,16 +194,16 @@ function check($data){
       
        <hr class="sidebar-divider d-none d-md-block">
 
-      
+       
        <div class="text-center d-none d-md-inline">
          <button class="rounded-circle border-0" id="sidebarToggle"></button>
        </div>
 
      </ul>
-     
+    
      <div id="content-wrapper" class="d-flex flex-column">
 
-       
+      
        <div id="content">
 
         
@@ -244,8 +245,7 @@ function check($data){
            </ul>
 
          </nav>
-        
-         <div class="container-fluid">
+           <div class="container-fluid">
            <h1 class="h3 mb-2 text-gray-800" align="center">Change Password</h1>
 
            <div class="card shadow mb-4">
@@ -321,10 +321,10 @@ function check($data){
              </div>
            </div>
          </div>
-         
+    
 
        </div>
-       
+      
        <footer class="sticky-footer bg-white">
          <div class="container my-auto">
            <div class="copyright text-center my-auto">
@@ -332,7 +332,7 @@ function check($data){
            </div>
          </div>
        </footer>
-      
+       
 
      </div>
      
@@ -376,14 +376,14 @@ function check($data){
    
    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-   
+  
    <script src="js/sb-admin-2.min.js"></script>
 
-   
+  
    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-   
+  
    <script src="js/demo/datatables-demo.js"></script>
 
  </body>
