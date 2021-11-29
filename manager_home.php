@@ -8,6 +8,8 @@ $res = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($res);
 do {
   $role = $row['role'];
+  $id = $row['user_id'];
+
   $row = mysqli_fetch_assoc($res);
 } while ($row);
 if(!$user && $role == 'Manager'){
@@ -28,7 +30,7 @@ if(!$user && $role == 'Manager'){
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Rental House Management System</title>
+  <title>TENANT</title>
   <link rel="icon" href="rent.ico">
 
   <!-- Custom fonts for this template-->
@@ -47,64 +49,50 @@ if(!$user && $role == 'Manager'){
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar" style="background-image: linear-gradient(200deg,#39A2DB,#25ffc8);">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="manager_home.php">
 
-        <div class="sidebar-brand-text mx-3">Rental House Management System</div>
+        <div class="sidebar-brand-text mx-3">TENANT</div>
       </a>
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item">
-        <a class="nav-link" href="manager_home.php">
-          <i class="fas fa-fw fa-user"></i>
-          <span>Tenant</span></a>
+      <li class="nav-item" >
+        <a class="nav-link" href="manager_home.php"> &nbsp;
+          <i class="fas fa-user fa-cog" style="color:black;"></i>
+          <span style="color:black;  font-weight:700;">Tenant</span></a>
       </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link" href="list.php">
-          <i class="fas fa-fw fa-dollar-sign"></i>
-          <span>List of Payments</span></a>
       </li>
       <hr class="sidebar-divider">
-
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="mform_out.php">
-          <i class="fas fa-fw fa-clipboard-list"></i>
-          <span>Tenant-Out form</span>
+      <li class="nav-item" >
+        <a class="nav-link" href="list.php">&nbsp;
+          <i class="fa fa-info"style="color:black;"></i>
+          <span style="color:black; font-weight:700;">Payment list</span>
         </a>
-
       </li>
       <hr class="sidebar-divider">
-      <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link" href="m_change.php">
-          <i class="fas fa-fw fa-exchange-alt"></i>
-          <span>Change Password</span>
+          <i class="fas fa-money-check" style="color:black;"></i>
+          <span style="color:black; font-weight:700;">Change Password</span>
         </a>
+    
 
-      </li>
+    
 
 
 
       <hr class="sidebar-divider d-none d-md-block">
 
       <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
+      <center> <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
-
+      </center>
     </ul>
     <!-- End of Sidebar -->
 
@@ -115,7 +103,7 @@ if(!$user && $role == 'Manager'){
       <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="background-color:#39A2DB; height:1.9cm;">
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -131,7 +119,7 @@ if(!$user && $role == 'Manager'){
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php
+                <span class="mr-2 d-none d-lg-inline text-white-900 small" style="font-weight:900;"><?php
 
                 include "conn.php";
                 $uname = $_SESSION['username'];
@@ -168,10 +156,10 @@ if(!$user && $role == 'Manager'){
                   <thead>
                     <tr>
                       <th>Name</th>
-                      <th>Phone Number 1</th>
-                      <th>Phone Number 2</th>
+                      <th>Phone Number </th>
+                      <th>Alternative Number </th>
                       <th>House Name</th>
-                      <th>Duration of Occupation in months</th>
+                      <th>Duration in months</th>
                       <th>Terms of Payment</th>
                       <th>Rent per Term(Tsh.)</th>
                       <th>Beginning of Contract</th>
@@ -180,11 +168,11 @@ if(!$user && $role == 'Manager'){
                   </thead>
                   <tbody>
                     <?php
-
-                    $sql = "SELECT * FROM contract";
+        
+                    $sql = "SELECT * FROM contract where user_id='$id'";
                     $result = mysqli_query($con, $sql);
                     $row = mysqli_fetch_assoc($result);
-
+                   
                     do{
                       $t_id = $row['tenant_id'];
                       $c_id = $row['contract_id'];
@@ -199,7 +187,7 @@ if(!$user && $role == 'Manager'){
                         $pno1 = $row1['pno1'];
                         $row1 = mysqli_fetch_assoc($result1);
                       }while ($row1);
-
+                    
                       $h_id = $row['house_id'];
                       $query1 = "SELECT * FROM house WHERE house_id = '$h_id'";
                       $result2 = mysqli_query($con, $query1);
@@ -229,6 +217,7 @@ if(!$user && $role == 'Manager'){
                         echo '</tr>';
                       $row = mysqli_fetch_assoc($result);
                     }while ($row);
+                  
                      ?>
 
                   </tbody>

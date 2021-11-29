@@ -1,25 +1,21 @@
 <?php
 session_start();
 include "conn.php";
-
 $user = $_SESSION['username'];
 $sql = "SELECT * FROM user WHERE u_name = '$user'";
 $res = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($res);
 do {
   $role = $row['role'];
+  $id = $row['user_id'];
   $row = mysqli_fetch_assoc($res);
 } while ($row);
 if(!$user && $role == 'Manager'){
   echo '<script>window.location.href = "login.php";</script>';
   exit();
-}
-
- ?>
-
+} ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="utf-8">
@@ -27,18 +23,12 @@ if(!$user && $role == 'Manager'){
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
-  <title>Rental House Management System</title>
+  <title>TENANT</title>
   <link rel="icon" href="rent.ico">
-
-  <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-  <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -47,65 +37,54 @@ if(!$user && $role == 'Manager'){
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar" style="background-image: linear-gradient(200deg,#39A2DB,#25ffc8);">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="manager_home.php">
 
-        <div class="sidebar-brand-text mx-3">Rental House Management System</div>
+        <div class="sidebar-brand-text mx-3">TENANT</div>
       </a>
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item">
-        <a class="nav-link" href="manager_home.php">
-          <i class="fas fa-fw fa-user"></i>
-          <span>Tenant</span></a>
+      <li class="nav-item" >
+        <a class="nav-link" href="manager_home.php"> &nbsp;
+          <i class="fas fa-user fa-cog" style="color:black;"></i>
+          <span style="color:black;  font-weight:700;">Tenant</span></a>
       </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link" href="list.php">
-          <i class="fas fa-fw fa-dollar-sign"></i>
-          <span>List of Payments</span></a>
       </li>
       <hr class="sidebar-divider">
-
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="mform_out.php">
-          <i class="fas fa-fw fa-clipboard-list"></i>
-          <span>Tenant-Out form</span>
+      <li class="nav-item" >
+        <a class="nav-link" href="list.php">&nbsp;
+          <i class="fa fa-info"style="color:black;"></i>
+          <span style="color:black; font-weight:700;">Payment list</span>
         </a>
-
       </li>
       <hr class="sidebar-divider">
-      <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link" href="m_change.php">
-          <i class="fas fa-fw fa-exchange-alt"></i>
-          <span>Change Password</span>
+          <i class="fas fa-money-check" style="color:black;"></i>
+          <span style="color:black; font-weight:700;">Change Password</span>
         </a>
+    
 
-      </li>
+    
 
 
 
       <hr class="sidebar-divider d-none d-md-block">
 
       <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
+      <center> <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
-
+      </center>
     </ul>
+
+
+
+   
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -115,7 +94,8 @@ if(!$user && $role == 'Manager'){
       <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="background-color:#39A2DB; height:1.9cm;">
+
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -131,7 +111,7 @@ if(!$user && $role == 'Manager'){
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php
+                <span class="mr-2 d-none d-lg-inline text-white-900 small" style="font-weight:900;"><?php
 
                 include "conn.php";
                 $uname = $_SESSION['username'];
@@ -174,8 +154,8 @@ if(!$user && $role == 'Manager'){
                   </thead>
                   <tbody>
                     <?php
-
-                    $sql = "SELECT * FROM payment";
+ 
+                    $sql = "Select * from payment p, contract c where  c.tenant_id=p.tenant_id and c.user_id='$id'";
                     $result = mysqli_query($con, $sql);
                     $row = mysqli_fetch_assoc($result);
 

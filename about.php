@@ -181,15 +181,35 @@ if(isset($_POST["login"])){
         background:#e02626;
         border-radius:4px;
       }
+      .head h3
+      {
+          position: absolute;
+          top: 2cm;
+          left:1cm;
+          font-size: 40px;
+          letter-spacing:1px;
+      }
+      .head p{
+        position: absolute;
+          top: 3cm;
+          left:1cm;
+          text-align:justify;
+          font-size: 15px;
+  text-indent: 1px;
+          letter-spacing:1px;
+      }
+      .house
+      {
+          opacity: .6;
+      }
        </style>
   </head>
  
 </head>
 
-<body id="page-top" style= "background-color:#e8f0f2;background-image: url('logintemplate.png');background-repeat: no-repeat;
-
-background-size: 90%;">
+<body id="page-top" style= "background-color:f0f0ee;">
 <header class="header mb-5">
+    <img class="house" src="house2.jpg" height=50% width=50%>
 
 <nav class="navbar navbar-expand-lg fixed-top "  style="background-color: #39A2DB; height:60px;" id="mainNav">
   <div class="container">
@@ -204,18 +224,12 @@ background-size: 90%;">
     <div class="" id="navbarResponsive" style="position:absolute;right:20px;">
       <ul class="navbar-nav  ml-auto">
        
-      <li class="nav-item">
+    <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="index.php">Home</a>
         </li><li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="about.php">About us</a>
+          <a class="nav-link js-scroll-trigger" href="#about">About us</a>
         </li><li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#sell">Sell</a>
-          <!-- <?php 
-          if(empty($_SESSION['username'])){
-              echo '<script>window.location.href = "manager_home.php";</script>';
-          }else{
-            echo '<script>window.location.href = "login.php";</script>';}
-        ?> -->
         </li><li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#rent">Rent</a>
         </li>
@@ -224,7 +238,7 @@ background-size: 90%;">
         <?php 
           if(empty($_SESSION['username'])){
             echo '<li class="nav-item">';
-              echo '<a class="nav-link" href="register.php">Register</a>';
+              echo '<a class="nav-link" href="login.php">Sign in</a>';
             echo '</li>';
           }else{
             echo '<li class="nav-item">';
@@ -235,50 +249,23 @@ background-size: 90%;">
         
 
 
-      </ul>
-    </div>
-  </div>
-</nav>
-</header>
-  <div class="container">
+     <div class="head">
+         <h3>ABOUT US </h3>
+         <p>The Proposed system is a website designed to automate the entire operations of a modem House renting system.
 
-    <!-- Outer Row-->
-    <div class="  loginbox row justify-content-center" >
+· Helps user to save time
+· Provides services like packers, trucking, cleaning, sanitization and pest control
+· The proposed system has to overcome the mediators.
 
-      <div class="form">
-        <div class="login">
-          <div class="login-header">
-                  <form class="" action="<?php echo $_SERVER['PHP_SELF']; ?>" method = "POST">
-                   <h1>LOGIN</h1>
-                    <div class="form-group">
-                      <input type="text" class="form-control form-control-user" name="username" aria-describedby="emailHelp" value="<?php echo @$uname; ?>" placeholder="Username">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control form-control-user" name="password" placeholder="Password">
-                    </div>
+· The proposed system allows a direct communication between the seller and tenant
+· It allows users to update, search property details and use them whenever necessary
+· Provides facility to rent a home for quarantine purpose
+· User can search based on keywords such as location, prices
+· Comparison of properties based on location (distance from nearest hospital, school,    	airport, railway station etc.)
 
-                    <input class="btn " type="submit" name="login" value="Login">
-                  </form>
-                    <hr>
-                  <div class="text-center">
-                    <a class="small" href="forgot-password.php">Forgot Password?</a>
-                  </div>
-                  <div class="text-center">
-                    <a class="small" href="register.php">Create an Account!</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
+· Provide user to pay their rent online.
+· Saving time, money and energy together with quality of services
+</p></div>
   <script>
     if ( window.history.replaceState ) {
       window.history.replaceState( null, null, window.location.href );

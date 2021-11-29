@@ -48,13 +48,13 @@ if (isset($_POST['submit'])) {
   $pin = $_POST['pin'];
   $from = $_POST['from'];
   $to = $_POST['to'];
-  $sql = "SELECT * FROM user WHERE phone = '$pno'";
+  $sql = "SELECT * FROM payment WHERE ref_no = '$pno'";
   $query = mysqli_query($conn,$sql);
   $row = mysqli_fetch_assoc($query);
   do {
     $amm = $row['amount'];
-    $pin_no = $row['pin_no'];
-    $user = $row['user_id'];
+    $pin_no = $row['ref_no'];
+    $user = $row['tenant_id'];
     $row = mysqli_fetch_assoc($query);
   } while ($row);
 
@@ -64,17 +64,21 @@ if (isset($_POST['submit'])) {
       echo "Wrong PIN...";
     }else {
       if($amount > $amm ){
-        echo "Insufficient Amount: your balance is: Tsh. ".$amm;
+        echo "Insufficient Amount: your balance is: Rs. ".$amm;
       }
       else {
-        $sql1 = "SELECT * FROM user WHERE phone = '$pno1'";
+        $sql1 = "SELECT * FROM user WHERE pno = '$pno1'";
+  $sq2 = "SELECT * FROM payment WHERE ref_no = '$pno'";
+
         $query1 = mysqli_query($conn,$sql1);
+        $query2 = mysqli_query($conn,$sql2);
         $row1 = mysqli_fetch_assoc($query1);
         do {
-          $amm1 = $row1['amount'];
-          $rec = $row1['user_id'];
+          // $amm1 = $row1['amount'];
+          // $rec = $row1['tenant_id'];
           $row1 = mysqli_fetch_assoc($query1);
         } while ($row1);
+        
         if(mysqli_num_rows($query1) == 0){
           echo "The phone Number does not exist";
         }else {
@@ -97,43 +101,45 @@ if (isset($_POST['submit'])) {
           $client = new \Nexmo\Client($basic);
 
 
-          try {
-              $message = $client->message()->send([
-                  'to' => "$pno",
-                  'from' => '255621821818',
-                  'text' => "You have sent Tsh. ".number_format($amount)." to $pno1. Your balance is Tsh.".number_format($balance).". Ref. number: $ref_no on $date. Thank You."
-              ]);
+          // try {
+          //     $message = $client->message()->send([
+          //         'to' => "$pno",
+          //         'from' => '255621821818',
+          //         'text' => "You have sent Tsh. ".number_format($amount)." to $pno1. Your balance is Tsh.".number_format($balance).". Ref. number: $ref_no on $date. Thank You."
+          //     ]);
 
-              $response = $message->getResponseData();
+          //     $response = $message->getResponseData();
 
-              if($response['messages'][0]['status'] == 0) {
-                  echo "<script> alert('The message was sent successfully');</script>";
-              } else {
-                  echo "<script> alert('The message failed!!!');</script>";
-              }
-          } catch (Exception $e) {
-              echo "<script> alert('The message was not sent!!!');</script>";
-          }
+          //     if($response['messages'][0]['status'] == 0) {
+          //         echo "<script> alert('The message was sent successfully');</script>";
+          //     } else {
+          //         echo "<script> alert('The message failed!!!');</script>";
+          //     }
+          // }
+          //  catch (Exception $e) {
+          //     echo "<script> </script>";
+          // }
 
 
 
-          try {
-              $message = $client->message()->send([
-                  'to' => "$pno1",
-                  'from' => '255621821818',
-                  'text' => "You have received Tsh. ".number_format($amount)." from $pno. Your balance is Tsh. ".number_format($balance1).". Ref. number: $ref_no on $date. Thank You."
-              ]);
+          // try {
+          //     $message = $client->message()->send([
+          //         'to' => "$pno1",
+          //         'from' => '255621821818',
+          //         'text' => "You have received Rs. ".number_format($amount)." from $pno. Your balance is Tsh. ".number_format($balance1).". Ref. number: $ref_no on $date. Thank You."
+          //     ]);
 
-              $response = $message->getResponseData();
+          //     $response = $message->getResponseData();
 
-              if($response['messages'][0]['status'] == 0) {
-                  echo "<script> alert('The message was sent successfully');</script>";
-              } else {
-                  echo "<script> alert('The message failed!!!');</script>";
-              }
-          } catch (Exception $e) {
-              echo "<script> alert('The message was not sent!!!');</script>";
-          }
+          //     if($response['messages'][0]['status'] == 0) {
+          //         echo "<script> alert('The message was sent successfully');</script>";
+          //     } else {
+          //         echo "<script> alert('The message failed!!!');</script>";
+          //     }
+          // } 
+          // catch (Exception $e) {
+          //     echo "<script> alert('The message was notxx sent!!!');</script>";
+          // }
 
           echo "<script type='text/javascript'>alert('Payment has been performed successfully!');</script>";
           echo '<style>body{display:none;}</style>';
@@ -142,8 +148,9 @@ if (isset($_POST['submit'])) {
 
       }
     }
-  }else {
-    echo "<script type='text/javascript'>alert('The number does not exist!');</script>";
+  }
+  else {
+    echo "<script type='text/javascript'>alert('The number   nhh does not exist!');</script>";
     echo '<style>body{display:none;}</style>';
     echo '<script>window.location.href = "pay.php";</script>';
   }
@@ -196,15 +203,15 @@ if (isset($_POST['submit'])) {
       </li>
       <hr class="sidebar-divider">
       <li class="nav-item" >
-        <a class="nav-link" href="u_personal.php">
-          <i class="fas fa-fw fa-exchange-alt"style="color:black;"></i>
+        <a class="nav-link" href="u_personal.php">&nbsp;
+          <i class="fa fa-info"style="color:black;"></i>
           <span style="color:black; font-weight:700;">Additional Information</span>
         </a>
       </li>
       <hr class="sidebar-divider">
       <li class="nav-item">
         <a class="nav-link" href="upay.php">
-          <i class="fas fa-fw fa-exchange-alt" style="color:black;"></i>
+          <i class="fas fa-money-check" style="color:black;"></i>
           <span style="color:black; font-weight:700;">Payment Information</span>
         </a>
       </li>
@@ -279,7 +286,7 @@ if (isset($_POST['submit'])) {
                      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method = "POST">
                      <tr>
                        <td>
-                         Your Phone Number: E.g; 255717******
+                         Enter your Phone Number: 
                        </td>
                        <td><input type='text' class='form-control form-control-user' name='pno'></td>
                      </tr>
