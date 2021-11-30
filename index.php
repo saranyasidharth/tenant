@@ -48,9 +48,9 @@ include 'conn.php';
             </li><li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="about.php">About us</a>
             </li><li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#sell">Sell</a>
+              <a class="nav-link js-scroll-trigger" href="login.php">Sell</a>
             </li><li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#rent">Rent</a>
+              <a class="nav-link js-scroll-trigger" href="login.php">Rent</a>
             </li>
             
            
