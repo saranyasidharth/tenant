@@ -58,7 +58,7 @@ if(!$_SESSION['username']){
       <li class="nav-item">
         <a class="nav-link" href="upay.php">
           <i class="fas fa-money-check" style="color:black;"></i>
-          <span style="color:black; font-weight:700;">Payment Information</span>
+          <span style="color:black; font-weight:700;">Payment Histrory</span>
         </a>
       </li>
       <hr class="sidebar-divider">

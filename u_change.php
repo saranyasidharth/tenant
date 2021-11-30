@@ -72,7 +72,7 @@ function check($data){
       <li class="nav-item">
         <a class="nav-link" href="upay.php">
           <i class="fas fa-money-check" style="color:black;"></i>
-          <span style="color:black; font-weight:700;">Payment Information</span>
+          <span style="color:black; font-weight:700;">Payment Histrory</span>
         </a>
       </li>
       <hr class="sidebar-divider">
@@ -241,7 +241,8 @@ function check($data){
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; RHMS 2019</span>
+          <span>Copyright &copy; TENANT 2021</span>
+
           </div>
         </div>
       </footer>

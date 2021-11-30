@@ -209,7 +209,7 @@ background-size: 90%;">
         </li><li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#about">About us</a>
         </li><li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#sell">Sell</a>
+          <a class="nav-link js-scroll-trigger" href="login.php">Sell</a>
         </li><li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#rent">Rent</a>
         </li>
@@ -218,7 +218,7 @@ background-size: 90%;">
         <?php 
           if(empty($_SESSION['username'])){
             echo '<li class="nav-item">';
-              echo '<a class="nav-link" href="login.php">Sign in</a>';
+              echo '<a class="nav-link" href="register.php">Sign up</a>';
             echo '</li>';
           }else{
             echo '<li class="nav-item">';

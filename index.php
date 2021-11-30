@@ -46,7 +46,7 @@ include 'conn.php';
           <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#pagetop">Home</a>
             </li><li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About us</a>
+              <a class="nav-link js-scroll-trigger" href="about.php">About us</a>
             </li><li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#sell">Sell</a>
             </li><li class="nav-item">

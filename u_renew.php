@@ -71,7 +71,7 @@ if(!$_SESSION['username']){
             <h6 class="collapse-header">Details:</h6>
             <a class="collapse-item" href="u_personal.php">Personal Information</a>
             <a class="collapse-item" href="u_contact.php">Contact Information</a>
-            <a class="collapse-item" href="upay.php">Payment Information</a>
+            <a class="collapse-item" href="upay.php">Payment Histrory</a>
             <a class="collapse-item" href="u_contract.php">Contract</a>
           </div>
         </div>
@@ -245,7 +245,8 @@ if(!$_SESSION['username']){
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; RHMS 2019</span>
+          <span>Copyright &copy; TENANT 2021</span>
+
           </div>
         </div>
       </footer>

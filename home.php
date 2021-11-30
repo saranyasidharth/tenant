@@ -47,7 +47,7 @@ if(!$_SESSION['username']){
       <li class="nav-item">
         <a class="nav-link" href="upay.php">
           <i class="fas fa-money-check" style="color:black;"></i>
-          <span style="color:black; font-weight:700;">Payment Information</span>
+          <span style="color:black; font-weight:700;">Payment Histrory</span>
         </a>
       </li>
       <hr class="sidebar-divider">
@@ -171,11 +171,12 @@ if(!$_SESSION['username']){
                     $result = mysqli_query($con, $sql);
                     $row = mysqli_fetch_assoc($result);
                     $total = 0;
+                    $term=1;
                     do{
                       $hid = $row['house_id'];
                       $dur = $row['duration_month'];
                       $term = $row['terms'];
-                      $div = $dur/$term;
+                      $div = $dur+$term;
                       $day = $row['start_day'];
                       $day1  = date("Y-m-d", strtotime($day. "+ 2 days"));
                       echo '<tr>';

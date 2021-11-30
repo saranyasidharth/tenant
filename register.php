@@ -97,11 +97,11 @@ if(isset($_POST["submit"])){
             $pno1Err = "The phone number should not contain letters";
             echo "<script> alert('$pno1Err');</script>";
           }
-          elseif ((strlen($pno1) > 12)) {
+          elseif ((strlen($pno1) > 10)) {
             $pno1Err = "The phone number is too long";
             echo "<script> alert('$pno1Err');</script>";
           }
-          elseif ((strlen($pno1) < 12)) {
+          elseif ((strlen($pno1) < 10)) {
             $pno1Err = "The phone number is too short";
             echo "<script> alert('$pno1Err');</script>";
           }
