@@ -168,9 +168,8 @@ if (isset($_POST['submit'])) {
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <meta name="description" content="">
    <meta name="author" content="">
-
    <title>TENANT</title>
-   <link rel="icon" href="rent.ico">
+    <link rel="icon" href="icon1.jpg">
 
    <!-- Custom fonts for this template-->
    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -294,7 +293,7 @@ if (isset($_POST['submit'])) {
                        <td>
                          Receipient's Phone Number:
                        </td>
-                       <td><input type='text' class='form-control form-control-user' name='pno1' value="255717812676" readonly></td>
+                       <td><input type='text' class='form-control form-control-user' name='pno1' value="8557879669" readonly></td>
                      </tr><tr><td>
                          Your PIN Number:
                        </td>

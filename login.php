@@ -104,7 +104,8 @@ if(isset($_POST["login"])){
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
+  <title>TENANT</title>
+    <link rel="icon" href="icon1.jpg">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
   <link href="css/rent.css" rel="stylesheet">
@@ -207,11 +208,11 @@ background-size: 90%;">
       <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="index.php">Home</a>
         </li><li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About us</a>
+          <a class="nav-link js-scroll-trigger" href="about.php">About us</a>
         </li><li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="login.php">Sell</a>
         </li><li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#rent">Rent</a>
+          <a class="nav-link js-scroll-trigger" href="login.php">Rent</a>
         </li>
         
        
@@ -245,7 +246,7 @@ background-size: 90%;">
                   <form class="" action="<?php echo $_SERVER['PHP_SELF']; ?>" method = "POST">
                    <h1>LOGIN</h1>
                     <div class="form-group">
-                      <input type="text" class="form-control form-control-user" name="username" aria-describedby="emailHelp" value="<?php echo @$uname; ?>" placeholder="Username">
+                      <input type="text" class="form-control form-control-user text-black" style="color:black;" name="username" aria-describedby="emailHelp" value="<?php echo @$uname; ?>" placeholder="Username">
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" name="password" placeholder="Password">

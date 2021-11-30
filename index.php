@@ -118,15 +118,15 @@ include 'conn.php';
               <!-- /#main-slider-->
             </div>
           </div>
-        </div>
-        <!--
+        <!-- </div>
+        
         *** ADVANTAGES HOMEPAGE ***
         _________________________________________________________
 
-        <!--
+        
         *** HOT PRODUCT SLIDESHOW ***
         _________________________________________________________
-        -->
+      
         <div id="hot">
           <div class="box py-4">
             <div class="container">
@@ -143,23 +143,17 @@ include 'conn.php';
                 <div class="product">
                   <div class="flip-container">
                     <div class="flipper">
-                      <div class="front"><a><img src="rent_1.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a><img src="rent_1.jpg" alt="" class="img-fluid"></a></div>
+                      <div class="front"><a><img src="" alt="" class="img-fluid"></a></div>
+                      <div class="back"><a><img src="" alt="" class="img-fluid"></a></div>
                     </div>
-                  </div><a class="invisible"><img src="rent_1.jpg" alt="" class="img-fluid"></a>
+                  </div><a class="invisible"><img src="" alt="" class="img-fluid"></a>
                   <div class="text">
                     <h3><a>List of Houses</a></h3>
                     <p class="price">
                       To Rent
                     </p>
                   </div>
-                  <!-- /.text-->
-
-                  <!-- /.ribbon-->
-
-                  <!-- /.ribbon-->
                 </div>
-                <!-- /.product-->
               </div>
               <div class="item">
                 <div class="product">
@@ -180,13 +174,7 @@ include 'conn.php';
                        ?>
                     </p>
                   </div>
-                  <!-- /.text-->
-
-                  <!-- /.ribbon-->
-
-                  <!-- /.ribbon-->
                 </div>
-                <!-- /.product-->
               </div>
               <div class="item">
                 <div class="product">
@@ -207,13 +195,7 @@ include 'conn.php';
                        ?>
                     </p>
                   </div>
-                  <!-- /.text-->
-
-                  <!-- /.ribbon-->
-
-                  <!-- /.ribbon-->
                 </div>
-                <!-- /.product-->
               </div>
               <div class="item">
                 <div class="product">
@@ -234,13 +216,7 @@ include 'conn.php';
                        ?>
                     </p>
                   </div>
-                  <!-- /.text-->
-
-                  <!-- /.ribbon-->
-
-                  <!-- /.ribbon-->
                 </div>
-                <!-- /.product-->
               </div>
               <div class="item">
                 <div class="product">
@@ -261,24 +237,14 @@ include 'conn.php';
                        ?>
                     </p>
                   </div>
-                  <!-- /.text-->
-
-                  <!-- /.ribbon-->
-
-                  <!-- /.ribbon-->
                 </div>
-                <!-- /.product-->
               </div>
-              <!-- /.product-slider-->
             </div>
-            <!-- /.container-->
           </div>
-          <!-- /#hot-->
-          <!-- *** HOT END ***-->
         </div>
 
       </div>
-    </div>
+    </div> -->
 
 
     <!-- /#footer-->
@@ -289,11 +255,11 @@ include 'conn.php';
     *** COPYRIGHT ***
     _________________________________________________________
     -->
-    <div id="copyright">
+    <div id="copyright" style="width:160%;position:absolute;left:1px;">
       <div class="container center">
         <div class="row">
           <div class="">
-            <p class="text-center ">Copyright &copy; 2021</p>
+            <p class="text-center text-800">Copyright &copy; TENANT 2021</p>
           </div>
         </div>
       </div>
