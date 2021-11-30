@@ -23,8 +23,8 @@ include 'conn.php';
     <link rel="stylesheet" href="vendor1/owl.carousel/assets/owl.carousel.css">
     <link rel="stylesheet" href="vendor1/owl.carousel/assets/owl.theme.default.css">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css1/style.default.css" id="theme-stylesheet">
-    <!-- <link rel="stylesheet" href="css1/custom.css"> -->
+    <!-- <link rel="stylesheet" href="css1/style.default.css" id="theme-stylesheet"> -->
+    <link rel="stylesheet" href="css1/custom.css">
     <link href="css/rent.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet"> 
 

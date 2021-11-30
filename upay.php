@@ -57,7 +57,7 @@ if(!$_SESSION['username']){
       <li class="nav-item">
         <a class="nav-link" href="upay.php">
           <i class="fas fa-money-check" style="color:black;"></i>
-          <span style="color:black; font-weight:700;">Payment Histrory</span>
+          <span style="color:black; font-weight:700;">Payment History</span>
         </a>
       </li>
       <hr class="sidebar-divider">
@@ -144,7 +144,7 @@ if(!$_SESSION['username']){
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-          <h1 class="h3 mb-2 text-gray-800" align="center">Payment Information.</h1>
+          <h1 class="h3 mb-2 text-gray-800" align="center">Payment History</h1>
           <div class="card shadow mb-4">
             <div class="card-body">
               <div class="table-responsive">
@@ -255,7 +255,7 @@ if(!$_SESSION['username']){
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
